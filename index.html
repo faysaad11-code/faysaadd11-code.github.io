@@ -3,26 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fay Saad | Portfolio</title>
+    <title>Fay Saad | Software Engineer & AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #f8fafc;
-            --card-bg: #ffffff;
-            --text: #0f172a;
-            --text-muted: #475569;
-            --primary: #1e293b;
-            --accent: #2563eb;
-            --border: #e2e8f0;
+            --bg: #090d16;
+            --card-bg: #111827;
+            --card-border: #1f2937;
+            --card-hover: #374151;
+            --text-primary: #f9fafb;
+            --text-secondary: #9ca3af;
+            --accent: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.15);
+            --badge-bg: rgba(56, 189, 248, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: 'Inter', -apple-system, sans-serif;
             background-color: var(--bg);
-            color: var(--text);
-            margin: 0;
-            padding: 40px 20px;
+            color: var(--text-primary);
+            padding: 80px 24px;
             display: flex;
             justify-content: center;
+            line-height: 1.6;
         }
 
         .container {
@@ -31,83 +43,166 @@
         }
 
         header {
-            margin-bottom: 32px;
-            padding-bottom: 24px;
-            border-bottom: 1px solid var(--border);
+            margin-bottom: 56px;
         }
 
-        h1 {
-            font-size: 2rem;
-            margin: 0 0 8px 0;
-            color: var(--primary);
+        .name {
+            font-size: 2.4rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .subtitle {
-            color: var(--text-muted);
-            font-size: 1.05rem;
-            margin: 0 0 16px 0;
+        .role {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+            margin-bottom: 24px;
         }
 
-        .links a {
-            color: var(--accent);
-            text-decoration: none;
+        .actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 18px;
+            border-radius: 10px;
+            font-size: 0.9rem;
             font-weight: 500;
-            margin-right: 16px;
-            font-size: 0.95rem;
+            text-decoration: none;
+            background: var(--card-bg);
+            color: var(--text-primary);
+            border: 1px solid var(--card-border);
         }
 
-        .links a:hover { text-decoration: underline; }
+        .btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            box-shadow: 0 0 15px var(--accent-glow);
+            transform: translateY(-2px);
+        }
 
-        .section { margin-bottom: 36px; }
+        .btn-primary {
+            background: var(--text-primary);
+            color: var(--bg);
+            border: none;
+            font-weight: 600;
+        }
+
+        .btn-primary:hover {
+            background: #e2e8f0;
+            color: var(--bg);
+            box-shadow: none;
+        }
+
+        .section {
+            margin-bottom: 48px;
+        }
 
         .section-title {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             font-weight: 600;
-            margin-bottom: 16px;
-            color: var(--primary);
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 20px;
         }
 
         .card {
             background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 20px;
+            border: 1px solid var(--card-border);
+            border-radius: 14px;
+            padding: 24px;
             margin-bottom: 16px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
         }
 
-        .card h3 {
-            margin: 0 0 6px 0;
-            font-size: 1.05rem;
-            color: var(--primary);
+        .card:hover {
+            border-color: var(--card-hover);
+            transform: translateY(-2px);
         }
 
-        .card .meta {
-            font-size: 0.85rem;
-            color: var(--text-muted);
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
             margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .card-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .time {
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-weight: 500;
         }
 
         .card p {
-            color: var(--text-muted);
-            font-size: 0.92rem;
-            line-height: 1.5;
-            margin: 0 0 12px 0;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 16px;
         }
 
         .tags {
             display: flex;
-            gap: 6px;
+            gap: 8px;
             flex-wrap: wrap;
-            margin-bottom: 12px;
+            margin-bottom: 16px;
         }
 
         .tag {
-            background: #f1f5f9;
-            color: #334155;
+            background: var(--badge-bg);
+            color: var(--accent);
             font-size: 0.78rem;
-            padding: 3px 8px;
-            border-radius: 4px;
+            font-weight: 500;
+            padding: 4px 10px;
+            border-radius: 6px;
+            border: 1px solid rgba(56, 189, 248, 0.15);
+        }
+
+        .link {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .link:hover {
+            color: var(--accent);
+        }
+
+        .list {
+            list-style: none;
+        }
+
+        .list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
         }
     </style>
 </head>
@@ -115,50 +210,59 @@
 
 <div class="container">
     <header>
-        <h1>Fay Saad Aldhwayan</h1>
-        <p class="subtitle">Computer Science Graduate | AI & Software Engineering</p>
-        <div class="links">
-            <a href="mailto:fay.info11@gmail.com">Email</a>
-            <a href="https://github.com/faysaadd11-code" target="_blank">GitHub</a>
+        <h1 class="name">Fay Saad Aldhwayan</h1>
+        <p class="role">Computer Science Graduate · AI & Software Engineering</p>
+        <div class="actions">
+            <a href="mailto:fay.info11@gmail.com" class="btn btn-primary">Get in Touch</a>
+            <a href="https://github.com/faysaadd11-code" target="_blank" class="btn">GitHub ↗</a>
         </div>
     </header>
 
     <div class="section">
         <div class="section-title">Featured Project</div>
         <div class="card">
-            <h3>FakeLess - AI Image Detection System</h3>
-            <div class="meta">Graduation Project (Team of 8)</div>
-            <p>An AI-based system designed to detect manipulated and AI-generated images using image integrity and authenticity verification techniques.</p>
+            <div class="card-header">
+                <h3 class="card-title">FakeLess — AI Image Detection System</h3>
+                <span class="time">Graduation Project</span>
+            </div>
+            <p>An intelligent web platform engineered to detect image forgery and AI-generated content using advanced computer vision models and image integrity analysis.</p>
             <div class="tags">
                 <span class="tag">Python</span>
                 <span class="tag">PHP</span>
-                <span class="tag">Artificial Intelligence</span>
-                <span class="tag">Image Processing</span>
+                <span class="tag">Computer Vision</span>
+                <span class="tag">Machine Learning</span>
             </div>
-            <div class="links">
-                <a href="https://github.com/faysaadd11-code/FakeLess" target="_blank">View Code on GitHub →</a>
-            </div>
+            <a href="https://github.com/faysaadd11-code/FakeLess" target="_blank" class="link">View Source Code on GitHub ↗</a>
         </div>
     </div>
 
     <div class="section">
-        <div class="section-title">Cooperative Experience</div>
+        <div class="section-title">Experience</div>
         <div class="card">
-            <h3>Cooperative Training Student</h3>
-            <div class="meta">Saudi Aramco — Security Systems Maintenance | Sep 2024 - Oct 2024</div>
-            <p>Analyzed technical data, maintained security systems, and collaborated on technical troubleshooting and department reporting.</p>
+            <div class="card-header">
+                <h3 class="card-title">Cooperative Training Student</h3>
+                <span class="time">Saudi Aramco</span>
+            </div>
+            <p>Security Systems Maintenance Department. Focused on data analysis, maintaining security infrastructure, technical troubleshooting, and department reporting.</p>
         </div>
     </div>
 
     <div class="section">
-        <div class="section-title">Education & Certifications</div>
+        <div class="section-title">Education & Credentials</div>
         <div class="card">
-            <h3>Bachelor's Degree in Computer Science</h3>
-            <div class="meta">Shaqra University | GPA: 4.01 / 5.0</div>
+            <div class="card-header">
+                <h3 class="card-title">Bachelor's in Computer Science</h3>
+                <span class="time">GPA 4.01 / 5.0</span>
+            </div>
+            <p style="margin: 0;">Shaqra University</p>
         </div>
         <div class="card">
-            <h3>Certifications</h3>
-            <p style="margin:0;">• AI Fundamentals & Cybersecurity — IBM SkillsBuild<br>• Principles of AI & Data Protection — SDAIA</p>
+            <h3 class="card-title" style="margin-bottom: 12px;">Certifications</h3>
+            <ul class="list">
+                <li>AI Fundamentals & Cybersecurity — <strong>IBM SkillsBuild</strong></li>
+                <li>Principles of Artificial Intelligence & Data Protection — <strong>SDAIA</strong></li>
+                <li>Digital Forensics — <strong>LEK International</strong></li>
+            </ul>
         </div>
     </div>
 </div>
