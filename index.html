@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fay Saad | Portfolio</title>
+    <style>
+        :root {
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #0f172a;
+            --text-muted: #475569;
+            --primary: #1e293b;
+            --accent: #2563eb;
+            --border: #e2e8f0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 680px;
+            width: 100%;
+        }
+
+        header {
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin: 0 0 8px 0;
+            color: var(--primary);
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin: 0 0 16px 0;
+        }
+
+        .links a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            margin-right: 16px;
+            font-size: 0.95rem;
+        }
+
+        .links a:hover { text-decoration: underline; }
+
+        .section { margin-bottom: 36px; }
+
+        .section-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--primary);
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+        }
+
+        .card h3 {
+            margin: 0 0 6px 0;
+            font-size: 1.05rem;
+            color: var(--primary);
+        }
+
+        .card .meta {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            line-height: 1.5;
+            margin: 0 0 12px 0;
+        }
+
+        .tags {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+
+        .tag {
+            background: #f1f5f9;
+            color: #334155;
+            font-size: 0.78rem;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Fay Saad Aldhwayan</h1>
+        <p class="subtitle">Computer Science Graduate | AI & Software Engineering</p>
+        <div class="links">
+            <a href="mailto:fay.info11@gmail.com">Email</a>
+            <a href="https://github.com/faysaadd11-code" target="_blank">GitHub</a>
+        </div>
+    </header>
+
+    <div class="section">
+        <div class="section-title">Featured Project</div>
+        <div class="card">
+            <h3>FakeLess - AI Image Detection System</h3>
+            <div class="meta">Graduation Project (Team of 8)</div>
+            <p>An AI-based system designed to detect manipulated and AI-generated images using image integrity and authenticity verification techniques.</p>
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">PHP</span>
+                <span class="tag">Artificial Intelligence</span>
+                <span class="tag">Image Processing</span>
+            </div>
+            <div class="links">
+                <a href="https://github.com/faysaadd11-code/FakeLess" target="_blank">View Code on GitHub →</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Cooperative Experience</div>
+        <div class="card">
+            <h3>Cooperative Training Student</h3>
+            <div class="meta">Saudi Aramco — Security Systems Maintenance | Sep 2024 - Oct 2024</div>
+            <p>Analyzed technical data, maintained security systems, and collaborated on technical troubleshooting and department reporting.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Education & Certifications</div>
+        <div class="card">
+            <h3>Bachelor's Degree in Computer Science</h3>
+            <div class="meta">Shaqra University | GPA: 4.01 / 5.0</div>
+        </div>
+        <div class="card">
+            <h3>Certifications</h3>
+            <p style="margin:0;">• AI Fundamentals & Cybersecurity — IBM SkillsBuild<br>• Principles of AI & Data Protection — SDAIA</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
